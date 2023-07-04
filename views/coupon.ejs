@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sangam Hotels | Coupon</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/allBooking.css">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="/" class="navbar-brand p-0">
+                <h2 class="text-primary m-0"><i class="fa fa-map-marker-alt me-3"></i>Sangam Hotels</h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="/" class="nav-item nav-link ">Home</a>
+                    <a href="/cheakIn" class="nav-item nav-link">Check In</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Features</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="/coupons" class="dropdown-item active">Coupons</a>
+                        </div>
+                    </div>
+                    <a href="/allBooking" class="nav-item nav-link">All Booking</a>
+                </div>
+                <a href="/logout" class="btn btn-primary rounded-pill py-2 px-4">Logout</a>
+            </div>
+        </nav>
+
+        <div class="container-fluid bg-primary mb-5 hero-header"
+            style="height: 50vh; box-sizing: border-box; display: flex; align-items: center;">
+            <div class="container py-5">
+                <div class="row justify-content-center py-5">
+                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                        <h1 class="display-3 text-white mb-3 animated slideInDown"><span
+                                style="color: red;">Coupons</span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
+
+    <div class="content">
+        <h2 style="text-align: center;">All Coupons</h2>
+        <button style="display: block;
+    margin: auto;
+    border: none;
+    background: #58d058;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 19px;
+    margin: 10px auto;" class="addCoupon" id="openPopupButton">Add Coupon</button>
+        <div style="overflow-x: auto;">
+            <table>
+                <thead>
+                    <tr style="  background: #d6b161; color: white;">
+                        <th>Add Time</th>
+                        <th>Coupon Code</th>
+                        <th>Coupon Type</th>
+                        <th>Coupon Value</th>
+                        <th> Remove </th>
+                    </tr>
+                </thead>
+                <tbody id="mytable">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <div class="container-xxl py-5">
+                <span style="display: block;color: white; margin: 0 12px;background: red;" id="error_success"></span>
+                <div class="container">
+                    <div class="booking p-5">
+                        <div class="row g-5 align-items-center">
+                            <div class="col-md-12">
+                                <h1 class="text-white mb-4">Enter Details</h1>
+                                <form id="coupon_form">
+                                    <div class="row g-3">
+                                        <div class="col-md-12">
+                                            <div class="form-floating">
+                                                <input type="text" name="couponCode" class="form-control bg-transparent"
+                                                    id="couponCode" placeholder="Coupon Code" required>
+                                                <label for="couponCode">Coupon Code</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-floating">
+                                                <select name="couponType" id="couponType"
+                                                    class="form-control bg-transparent">
+                                                    <option value="percent" selected>Percentage</option>
+                                                    <option value="amount">Amount</option>
+                                                </select>
+                                                <label for="name">Coupon Type</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-floating">
+                                                <input min="1" type="number" name="discount"
+                                                    class="form-control bg-transparent" id="discount"
+                                                    placeholder="Coupon Value" required>
+                                                <label for="discount">Coupon Value</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <button class="btn btn-outline-light w-100 py-3" type="submit"
+                                                id="coupon_btn" name="submit_btn">ADD</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Sangam Hotels</a>, All Right Reserved@2023.
+                        Made with <span style="color: red;"><i class="fas fa-heart"></i></span> by <a
+                            class="border-bottom" href="https://deepaksuthar40128@gmail.com">Deepak
+                            Suthar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        window.onload = async () => {
+            mytable.innerHTML = `<div id="spinner" style="height:100px" class="show bg-white  start-50 d-flex align-items-center justify-content-center">
+                        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>`
+            $.ajax({
+                url: '/allCoupons',
+                method: "GET"
+            }).done((response) => {
+                feedCoupons(response);
+            })
+        }
+        let mytable = document.getElementById('mytable');
+        const feedCoupons = (data) => {
+            mytable.innerHTML = '';
+            data.map((coupon) => {
+                mytable.innerHTML += `
+                    <tr id='${coupon._id}'>
+                        <td>${coupon.createdAt}</td>
+                        <td>${coupon.value}</td>
+                        <td>${coupon.discount_type}</td>
+                        <td>${coupon.discount}</td>
+                        <td> <button onclick="deleteCoupon('${coupon._id}')" style="background: #ed0000;">Delete</button> </td>
+                    </tr>
+                    `
+            })
+        }
+
+        document.getElementById("openPopupButton").addEventListener("click", function () {
+            document.getElementById("popup").style.display = "block";
+        })
+
+        let openPopupButton = document.getElementById("openPopupButton");
+        let popup = document.getElementById("popup");
+        let popupContent = document.querySelector(".popup-content");
+        let coupon_btn = document.getElementById('coupon_btn');
+        document.addEventListener("click", function (event) {
+            if (!popupContent.contains(event.target) && event.target !== openPopupButton) {
+                popup.style.display = "none";
+            }
+        });
+
+        let coupon_form = document.getElementById('coupon_form');
+        coupon_form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            coupon_form.submit_btn.innerText = 'Loading'
+            let data = {
+                value: coupon_form.couponCode.value,
+                discount_type: coupon_form.couponType.value,
+                discount: coupon_form.discount.value,
+            }
+            $.ajax({
+                url: '/addCoupon',
+                method: 'POST',
+                data
+            }).done((coupon) => {
+                let status = document.getElementById('error_success');
+                if (coupon.success) {
+                    status.style.background = 'green';
+                    status.style.padding = '10px'
+                    status.innerText = `Coupon Added Successfully!`
+                    mytable.innerHTML = `
+                    <tr id='${coupon._id}'>
+                        <td>${coupon.createdAt}</td>
+                        <td>${coupon.value}</td>
+                        <td>${coupon.discount_type}</td>
+                        <td>${coupon.discount}</td>
+                        <td> <button onclick="deleteCoupon('${coupon._id}')" style="background: #ed0000;">Delete</button> </td>
+                    </tr>
+                    `+ mytable.innerHTML;
+                }
+                else {
+                    status.innerText = coupon.error
+                    status.style.background = 'red';
+                    status.style.padding = '10px'
+                }
+                coupon_form.couponCode.value = ''
+                coupon_form.discount.value = ''
+                coupon_form.submit_btn.innerText = 'ADD'
+            })
+        })
+
+        const deleteCoupon = (id) => {
+            document.getElementById(id).children[4].children[0].innerHTML = "Loading";
+            $.ajax({
+                url: `/deleteCoupon/${id}`,
+                method: "GET"
+            }).done((response) => {
+                if (response.success)
+                    document.getElementById(id).remove();
+                else {
+                    alert("Something Wrong!");
+                    document.getElementById(id).children[4].children[0].innerHTML = "Delete";
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

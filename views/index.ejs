@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sangam Hotels</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
+
+    <!-- Google Web Fonts -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <h2 class="text-primary m-0"><i class="fa fa-map-marker-alt me-3"></i>Sangam Hotels</h2>
+                <!-- <img src="/img/logo.png" alt="Logo"> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="/" class="nav-item nav-link active">Home</a>
+                    <a href="/showRooms" class="nav-item nav-link ">Rooms</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">History</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="/allTransitions" class="dropdown-item">All Transitions</a>
+                        </div>
+                    </div>
+                    <a href="/contactUs" class="nav-item nav-link">Contact Us</a>
+                </div>
+                <a href="/login" class="btn btn-primary rounded-pill py-2 px-4">Login/Register</a>
+            </div>
+        </nav>
+
+        <div class="container-fluid bg-primary mb-5 hero-header"
+            style="height: 100vh; box-sizing: border-box; display: flex; align-items: center;">
+            <div class="container py-5">
+                <div class="row justify-content-center py-5">
+                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                        <h1 class="display-3 text-white mb-3 animated slideInDown">Ensure Your <span
+                                style="color: red;">STAY</span> With Us</h1>
+                        <p class="fs-4 text-white mb-4 animated slideInDown">SANGAM INTERNATIONAL GROUP OF HOTELS</p>
+                        <div class="position-relative w-75 mx-auto animated slideInDown">
+                            <a href="/showRooms" <button type="button"
+                                class="btn btn-primary rounded-pill py-2 px-4 top-0 end-0 me-2"
+                                style="margin-top: 7px;">Book Now</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5" id="aboutUs">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="/img/about.jpeg" alt=""
+                            style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
+                    <h1 class="mb-4">Welcome to <span class="text-primary">Sangam Hotels</span></h1>
+                    <p class="mb-4">Discover unrivaled luxury at Sangam Hotels, where impeccable service, exquisite
+                        amenities, and breathtaking views await
+                        you.</p>
+                    <p class="mb-4">Indulge in a world-class hospitality experience at Sangam Hotels, where every detail
+                        is meticulously crafted to exceed
+                        your expectations.
+                    </p>
+                    <div class="row gy-2 gx-4 mb-4">
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Rooms</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Best in Class Hotel</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Fresh and Clean Rooms</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Intractive Staff</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Cheap and affordable
+                                Price</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>24/7 Service</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Features</h6>
+                <h1 class="mb-5">Why Us?</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-solid fa-bed text-primary mb-4"></i>
+                            <h5>AC Rooms</h5>
+                            <p>Experience ultimate comfort and relaxation in our air-conditioned rooms.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-solid fa-dollar-sign text-primary mb-4"></i>
+                            <h5>Cheap Price</h5>
+                            <p>Enjoy affordable rates without compromising on quality at our budget-friendly
+                                accommodations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-user text-primary mb-4"></i>
+                            <h5>24/7 Staff Available</h5>
+                            <p>Rest easy knowing that our dedicated staff is available around the clock</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-cog text-primary mb-4"></i>
+                            <h5>Fully Managed Rooms</h5>
+                            <p>Experience hassle-free stays with Sangam Hotels with our fully managed rooms.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
+                            <h5>Hygienic bathrooms</h5>
+                            <p>Experience pristine cleanliness and hygiene in our meticulously maintained bathrooms.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-hotel text-primary mb-4"></i>
+                            <h5>Door to Door Service</h5>
+                            <p>Enjoy the convenience of our door-to-door service of every Hotel Room</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-user text-primary mb-4"></i>
+                            <h5>Emergency Help</h5>
+                            <p>Rest assured that in case of any emergencies, our dedicated team is available.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-cog text-primary mb-4"></i>
+                            <h5>Event Management</h5>
+                            <p>Our expert event management team will skillfully plan and execute every aspect of your
+                                special
+                                event</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Gallery Start -->
+    <div class="container-xxl py-5 destination">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Gallery</h6>
+                <h1 class="mb-5">Gallery</h1>
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-7 col-md-6">
+                    <div class="row g-3">
+                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="/img/gimg1.jpeg" alt="">
+
+
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="/img/rooms/gimg2.jpeg" alt="">
+
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="img/rooms/family.jpeg" alt="">
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+                    <a class="position-relative d-block h-100 overflow-hidden" href="">
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/night.jpeg" alt=""
+                            style="object-fit: cover;">
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery end -->
+
+
+    <!-- Package Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Best In Class</h6>
+                <h1 class="mb-5">Top HighLights</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="package-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/rooms/r1.jpeg" alt="">
+                        </div>
+                        <div class="d-flex border-bottom">
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>Best
+                                for 2
+                                Person</small>
+                        </div>
+                        <div class="text-center p-4">
+                            <h3 class="mb-0">Only <%=amount%>/-</h3>
+                            <span style="font-size: small; color: red;">*Few left,Hurry Up!</span>
+                            <p>Experience the perfect getaway for two in our cozy and intimate rooms</p>
+                            <div class="d-flex justify-content-center mb-2">
+                                <a href="/showRooms" class="btn btn-sm btn-primary px-3"
+                                    style="border-radius:30px;">Book
+                                    Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="package-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/rooms/main_room.jpeg" alt="">
+                        </div>
+                        <div class="d-flex border-bottom">
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>For
+                                Couples</small>
+                        </div>
+                        <div class="text-center p-4">
+                            <h3 class="mb-0">Only <%=amount%>/-</h3>
+                            <span style="font-size: small; color: red;">*Few left,Hurry Up!</span>
+                            <p>Create cherished moments together in our couples' retreat</p>
+                            <div class="d-flex justify-content-center mb-2">
+                                <a href="/showRooms" class="btn btn-sm btn-primary px-3"
+                                    style="border-radius:30px;">Book
+                                    Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="package-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/rooms/family.jpeg" alt="">
+                        </div>
+                        <div class="d-flex border-bottom">
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>For
+                                Family</small>
+                        </div>
+                        <div class="text-center p-4">
+                            <h3 class="mb-0">Only <%=amount%>/-</h3>
+                            <span style="font-size: small; color: red;">*Few left,Hurry Up!</span>
+                            <p>Enjoy a delightful stay with your family in our spacious and family-friendly rooms,
+                            </p>
+                            <div class="d-flex justify-content-center mb-2">
+                                <a href="/showRooms" class="btn btn-sm btn-primary px-3"
+                                    style="border-radius:30px;">Book
+                                    Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Package End -->
+
+    <!-- Process Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">How to Book</h6>
+                <h1 class="mb-5">3 Easy Steps</h1>
+            </div>
+            <div class="row gy-5 gx-4 justify-content-center">
+                <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="position-relative border border-primary pt-5 pb-4 px-4">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+                            style="width: 100px; height: 100px;">
+                            <i class="fa fa-3x fa-user text-white"></i>
+                        </div>
+                        <h5 class="mt-4">Create Account</h5>
+                        <hr class="w-25 mx-auto bg-primary mb-1">
+                        <hr class="w-50 mx-auto bg-primary mt-0">
+                        <p class="mb-0"><a href="/register">Join</a> us by creating your account and unlock a world of
+                            exclusive benefits with us!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="position-relative border border-primary pt-5 pb-4 px-4">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+                            style="width: 100px; height: 100px;">
+                            <i class="fa fa-3x fa-solid fa-bed text-white"></i>
+                        </div>
+                        <h5 class="mt-4">See Rooms</h5>
+                        <hr class="w-25 mx-auto bg-primary mb-1">
+                        <hr class="w-50 mx-auto bg-primary mt-0">
+                        <p class="mb-0">Indulge in the ultimate luxury experience with our best-in-class room,
+                            meticulously designed</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="position-relative border border-primary pt-5 pb-4 px-4">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+                            style="width: 100px; height: 100px;">
+                            <i class="fa fa-dollar-sign fa-3x text-white"></i>
+                        </div>
+                        <h5 class="mt-4">Pay Online</h5>
+                        <hr class="w-25 mx-auto bg-primary mb-1">
+                        <hr class="w-50 mx-auto bg-primary mt-0">
+                        <p class="mb-0">Experience the convenience and security of online payment. Easily pay for your
+                            booking</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Process Start -->
+
+
+
+
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Sangam Group</h6>
+                <h1 class="mb-5">Meet Our Team</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/head.jpeg" alt="">
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Saket Naik</h5>
+                            <small>Head</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/manager.jpeg" alt="">
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Jay Shankar shukla</h5>
+                            <small>Manager</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/team2.jpg" alt="">
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Abhishek Shukla</h5>
+                            <small>Team Member</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/team1.jpg" alt="">
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Aman Pandey</h5>
+                            <small>Team Member</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
+                <h1 class="mb-5">Our Clients Say!!!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel position-relative">
+                <div class="testimonial-item bg-white text-center border p-4">
+                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-1.jpg"
+                        style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Deepak Suthar</h5>
+                    <p>IIIT,Allahabad</p>
+                    <p class="mb-0">Sangam Hotels provided an outstanding experience. The room was clean, comfortable,
+                        and
+                        beautifully decorated. - Satisfied Guest</p>
+                </div>
+                <div class="testimonial-item bg-white text-center border p-4">
+                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/sumitRawat.jpeg"
+                        style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Sumit Rawat</h5>
+                    <p>Kanpur,U.P.</p>
+                    <p class="mt-2 mb-0">I had a fantastic stay at Sangam Hotels. The room was spacious,
+                        well-maintained,
+                        and had a stunning view. - Happy Customer</p>
+                </div>
+                <div class="testimonial-item bg-white text-center border p-4">
+                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/neelPatel.jpeg"
+                        style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Neel Patel</h5>
+                    <p>Delhi</p>
+                    <p class="mt-2 mb-0">Sangam Hotels exceeded my expectations. The room was luxurious and had all the
+                        amenities I needed. - Impressed Visitor</p>
+                </div>
+                <div class="testimonial-item bg-white text-center border p-4">
+                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/kartikGupta.jpeg"
+                        style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Kartik Gupta</h5>
+                    <p>Patna,Bihar</p>
+                    <p class="mt-2 mb-0">I had a memorable experience at Sangam Hotels. The room was cozy and had a
+                        peaceful
+                        ambiance. -
+                        Satisfied Traveler.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Sangam Hotels</h4>
+                    <a class="btn btn-link" href="/">About Us</a>
+                    <a class="btn btn-link" href="/contactUs">Contact Us</a>
+                    <a class="btn btn-link" href="/terms">Terms and Conditions</a>
+                    <a class="btn btn-link" href="/privacy">Privacy Policy</a>
+                    <a class="btn btn-link" href="https://merchant.razorpay.com/policy/M4WSnPP4Xl1aq4/shipping">Shipping
+                        and Delivery Policy</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>HP Tower,Ghungru
+                        Chauraha,Jhalwa,Prayagraj,U.P.,211012
+                    </p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91-8931098305, +91-8604098305</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>support@sangaminternationalhotel.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Sangam Hotels</a>, All Right Reserved@2023.
+                        Made with <span style="color: red;"><i class="fas fa-heart"></i></span> by <a
+                            class="border-bottom" href="https://deepaksuthar40128@gmail.com">Deepak
+                            Suthar</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="/">Home</a>
+                            <a href="/">Cookies</a>
+                            <a href="/">Help</a>
+                            <a href="/">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

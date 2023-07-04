@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sangam Hotels | All Transitions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="/" class="navbar-brand p-0">
+                <h2 class="text-primary m-0"><i class="fa fa-map-marker-alt me-3"></i>Sangam Hotels</h2>
+                <!-- <img src="/img/logo.png" alt="Logo"> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="/" class="nav-item nav-link">Home</a>
+                    <a href="/showRooms" class="nav-item nav-link">Rooms</a>
+                    <div class="nav-item dropdown active">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">History</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="/allTransitions" class="dropdown-item">All Transitions</a>
+                        </div>
+                    </div>
+                    <a href="/contactUs" class="nav-item nav-link">Contact Us</a>
+                </div>
+                <a href="/logout" class="btn btn-primary rounded-pill py-2 px-4">Logout</a>
+            </div>
+        </nav>
+
+        <div class="container-fluid bg-primary mb-5 hero-header"
+            style="height: 50vh; box-sizing: border-box; display: flex; align-items: center;">
+            <div class="container py-5">
+                <div class="row justify-content-center py-5">
+                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                        <h1 class="display-3 text-white mb-3 animated slideInDown">All Transitions
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
+
+
+    <!-- 404 Start -->
+    <div style="padding: 20px;">
+        <h2>Payment Details for Sangam Hotels</h2>
+        <div style="overflow-x: auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Total Amount</th>
+                        <th>Nights</th>
+                        <th>Rooms</th>
+                        <th>Payment ID</th>
+                        <th>Order ID</th>
+                        <th>Payment Time</th>
+                        <th>Razorpay Sign</th>
+                    </tr>
+                </thead>
+                <tbody id="mytable">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- 404 End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Sangam Hotels</h4>
+                    <a class="btn btn-link" href="/">About Us</a>
+                    <a class="btn btn-link" href="/contactUs">Contact Us</a>
+                    <a class="btn btn-link" href="/terms">Terms and Conditions</a>
+                    <a class="btn btn-link" href="/privacy">Privacy Policy</a>
+                    <a class="btn btn-link" href="https://merchant.razorpay.com/policy/M4WSnPP4Xl1aq4/shipping">Shipping and Delivery Policy</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>HP Tower,Ghungru Chauraha,Jhalwa,Prayagraj,U.P.,211012
+                </p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91-8931098305, +91-8604098305</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>support@sangaminternationalhotel.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Sangam Hotels</a>, All Right Reserved@2023.
+                    Made with <span style="color: red;"><i class="fas fa-heart"></i></span> by <a class="border-bottom"
+                        href="https://deepaksuthar40128@gmail.com">Deepak
+                        Suthar</a>
+                </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="/">Home</a>
+                            <a href="/">Cookies</a>
+                            <a href="/">Help</a>
+                            <a href="/">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+
+        window.onload = () => {
+            let table = document.getElementById('mytable')
+            var request = {
+                "url": '/allTransition',
+                "method": "POST"
+            }
+            $.ajax(request).done(function (response) {
+                response.map(transition => {
+                    table.innerHTML += `<tr>
+                    <td data-label="Username">${transition.user.username}</td>
+                    <td data-label="Email">${transition.user.email}</td>
+                    <td data-label="Total Amount">${transition.amount}/-</td>
+                    <td data-label="Total Nights to Stay">${transition.nights} nights</td>
+                    <td data-label="Total Nights to Stay">${transition.rooms} rooms</td>
+                    <td data-label="Payment ID">${transition.razorpay_payment_id}</td>
+                    <td data-label="Order ID">${transition.razorpay_order_id}</td>
+                    <td data-label="Payment Time">${transition.createdAt}</td>
+                    <td data-label="Razorpay Sign">${transition.razorpay_signature}</td>
+                </tr>`
+                })
+            })
+        }
+    </script>
+</body>
+
+</html>
